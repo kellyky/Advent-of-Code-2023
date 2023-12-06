@@ -1,6 +1,10 @@
-require 'pry-byebug'
-cards = File.read('input.txt').split("\n")
+# frozen_string_literal: false
 
+require 'pry-byebug'
+
+cards = File.read('input.txt').split('\n')
+
+# Reads pile of cards & calculates total points
 class ScratchCardPileReader
   attr_reader :total_value
 
@@ -16,8 +20,8 @@ class ScratchCardPileReader
   end
 
   def parse_raw_card_values(card)
-    @card_id, card_values = card.split(":")
-    winning_number_list, card_numbers = card_values.split("|")
+    @card_id, card_values = card.split(':')
+    winning_number_list, card_numbers = card_values.split('|')
     @winning_numbers = winning_number_list.split
     @card_numbers = card_numbers.split
 
@@ -29,7 +33,6 @@ class ScratchCardPileReader
     @winning_matches = @winning_numbers.select do |num|
       @card_numbers.include?(num)
     end
-    
   end
 
   def value_of_card
@@ -41,12 +44,10 @@ class ScratchCardPileReader
         points *= 2
       end
     end
-   
+
     @total_value += points
   end
-
 end
-
 
 lotto = ScratchCardPileReader.new(cards)
 lotto.parse_cards
