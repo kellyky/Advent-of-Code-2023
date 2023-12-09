@@ -1,0 +1,23 @@
+Time:      7  15   30
+Distance:  9  40  200
+
+# Hash created from the "real" input data
+    # I think we want by race... 
+    # races = {
+    #   race_1: {
+    #     time: 42,
+    #     distance: 284
+    #   },
+    #   race_2: {
+    #     time: 68,
+    #     distance: 1005
+    #   },
+    #   race_3: {
+    #     time: 69,
+    #     distance: 1122
+    #   },
+    #   race_4: {
+    #     time: 85,
+    #     distance: 1341
+    #   }
+    # }
